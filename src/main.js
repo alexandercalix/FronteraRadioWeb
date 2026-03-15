@@ -1,23 +1,32 @@
-// src/main.js
+console.log("MAIN: Script is loading...");
+
 import { RadioPlayer } from "./audio.js";
 import { initUI, animatePlayState } from "./ui.js";
+import { initBackground } from "./fx.js";
 import { CONFIG } from "./config.js";
+
+console.log("MAIN: Imports successful.");
 
 const player = new RadioPlayer(CONFIG.streamUrl);
 
 document.addEventListener("DOMContentLoaded", () => {
-  initUI();
+  console.log("MAIN: DOM Content Loaded. Initializing...");
 
-  const playBtn = document.getElementById("playTrigger");
+  try {
+    initBackground();
+    initUI();
 
-  if (playBtn) {
-    playBtn.addEventListener("click", () => {
-      console.log("Play button clicked!"); // Log 1
-      const isPlaying = player.toggle();
-      console.log("Is playing state:", isPlaying); // Log 2
-      animatePlayState(isPlaying);
-    });
-  } else {
-    console.error("CRITICAL: playTrigger button not found in DOM.");
+    const playBtn = document.getElementById("playTrigger");
+    if (playBtn) {
+      console.log("MAIN: Play button found!");
+      playBtn.addEventListener("click", () => {
+        const isPlaying = player.toggle();
+        animatePlayState(isPlaying);
+      });
+    } else {
+      console.error("MAIN ERROR: playTrigger not found!");
+    }
+  } catch (error) {
+    console.error("MAIN CRASHED during init:", error);
   }
 });

@@ -27,4 +27,9 @@ export const CONFIG = {
     neonColor: "#00f3ff",
     activeColor: "#ff00ff",
   },
+  video: {
+    src: "assets/bg.mp4",
+    speed: 0.5,
+    backward: true, // Set to false to use normal standard looping
+  },
 };
