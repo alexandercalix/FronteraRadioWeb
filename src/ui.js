@@ -46,6 +46,15 @@ export const initUI = () => {
             width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
+        <div class="modal-contact">
+          <a href="mailto:info@fronterahn.com" class="contact-email">
+            <i class="fa-solid fa-envelope"></i> info@fronterahn.com
+          </a>
+          <a href="privacidad.html" target="_blank" rel="noopener" class="contact-email">
+            <i class="fa-solid fa-shield-halved"></i> Política de Privacidad
+          </a>
+        </div>
+
         <div class="modal-footer">
             <span>Developed By: O.C.</span>
             <a href="https://www.linkedin.com/in/oscarcalixnolasco/" target="_blank" class="dev-link">
