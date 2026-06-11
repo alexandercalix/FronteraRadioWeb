@@ -135,6 +135,12 @@
       .card strong {
         color: #ffffff;
       }
+      .card ul {
+        margin-top: 10px;
+      }
+      .card .card-footer {
+        margin-top: 10px;
+      }
 
       footer {
         text-align: center;
@@ -153,7 +159,7 @@
           <span class="brand">Frontera FM 95.1</span>
         </div>
         <h1>Política de Privacidad</h1>
-        <p class="updated">Última actualización: 8 de junio de 2026</p>
+        <p class="updated">Última actualización: 10 de junio de 2026</p>
       </header>
 
       <section>
@@ -170,7 +176,7 @@
         <h2>2. Información que recopilamos</h2>
         <p>
           Nuestra aplicación recopila únicamente la información mínima necesaria
-          para funcionar:
+          para funcionar y mejorar el servicio:
         </p>
         <ul>
           <li>
@@ -179,14 +185,24 @@
             enviarte noticias y alertas de la estación.
           </li>
           <li>
-            <strong>Datos de uso anónimos:</strong> información técnica como el
-            sistema operativo y la versión de la app, recopilada automáticamente
-            por Firebase para detectar errores y mejorar el servicio.
+            <strong>Eventos de uso anónimos:</strong> registramos interacciones
+            dentro de la app de forma completamente anónima mediante Firebase
+            Analytics. Esto incluye qué pantallas visitas, si reproduces o
+            pausas la transmisión en vivo, si abres un artículo, si interactúas
+            con imágenes y si consultas la programación. Estos eventos
+            <strong>no contienen ningún dato personal</strong> — son agregados
+            estadísticos que nos permiten entender cómo se usa la app.
+          </li>
+          <li>
+            <strong>Datos técnicos del dispositivo:</strong> información como el
+            sistema operativo, la versión de la app y el modelo del dispositivo,
+            recopilada automáticamente por Firebase para detectar errores y
+            mejorar la estabilidad.
           </li>
         </ul>
         <p>
           <strong>No recopilamos</strong> tu nombre, correo electrónico, número
-          de teléfono, ubicación, ni ninguna información de identificación
+          de teléfono, ubicación ni ninguna información de identificación
           personal.
         </p>
       </section>
@@ -197,6 +213,11 @@
           <li>
             Enviarte notificaciones push sobre noticias, alertas importantes y
             contenido de la estación.
+          </li>
+          <li>
+            Analizar de forma anónima cómo se usa la app (qué secciones se
+            visitan más, cuántas personas escuchan la transmisión en vivo) para
+            tomar decisiones editoriales y técnicas.
           </li>
           <li>Identificar y corregir errores técnicos en la aplicación.</li>
           <li>Mejorar la experiencia general de uso.</li>
@@ -217,10 +238,31 @@
         <div class="card">
           <p>
             <strong>Google Firebase (Google LLC)</strong><br />
-            Usamos Firebase para la base de datos en tiempo real, almacenamiento
-            de contenido y envío de notificaciones push (FCM). Google puede
-            procesar datos técnicos de tu dispositivo de acuerdo con su propia
-            política de privacidad.<br />
+            Usamos los siguientes servicios de Firebase:
+          </p>
+          <ul>
+            <li>
+              <strong>Firestore &amp; Storage:</strong> base de datos y
+              almacenamiento del contenido de la app.
+            </li>
+            <li>
+              <strong>Cloud Messaging (FCM):</strong> envío de notificaciones
+              push.
+            </li>
+            <li>
+              <strong>Analytics:</strong> análisis de uso anónimo de la app
+              (pantallas visitadas, eventos de reproducción, interacciones con
+              contenido). Los datos son anónimos y no se vinculan a ninguna
+              identidad personal.
+            </li>
+            <li>
+              <strong>Crashlytics:</strong> detección automática de errores
+              técnicos.
+            </li>
+          </ul>
+          <p class="card-footer">
+            Google puede procesar datos técnicos del dispositivo conforme a su
+            propia política de privacidad.<br />
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
